@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.correct {
+    color: #84cc16;
+}
+.wrong {
+    color: #ef4444;
+}
