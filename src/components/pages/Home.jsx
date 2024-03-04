@@ -2,7 +2,7 @@ import TextGenerator from "../TextGenerator";
 
 function Home() {
   return (
-    <div>
+    <div className="h-[100vh] flex flex-col justify-center items-center">
       <h1 className="text-black text-center text-2xl uppercase">
         Speed typing app
       </h1>
