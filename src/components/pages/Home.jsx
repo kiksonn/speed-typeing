@@ -18,7 +18,7 @@ function Home() {
 
   return (
     <div className="h-[100vh] flex flex-col justify-center items-center">
-      <h1 className="text-black text-center text-2xl uppercase mb-5">
+      <h1 className="text-black text-center text-4xl font-bold uppercase mb-2">
         Speed typing app
       </h1>
 
@@ -52,18 +52,18 @@ function Home() {
   className={
     !textImported || finished
       ? "hidden"
-      : "text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      : "uppercase text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
   }
 >
-  Start
+  Start Test
 </button>
 
 
         <button
           onClick={() => window.location.reload(false)}
-          className={!finished ? "hidden": "mt-5 text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"}
+          className={!finished ? "hidden": "mt-5 uppercase text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"}
         >
-          Restart
+          Restart Test
         </button>
       </div>
     </div>

@@ -20,9 +20,9 @@ function FormInput({ input, setInput, text, textImported }) {
             </div>
             <div>
                 <form className="w-full">
-                    <div>
-                        <input className="w-full mb-5"  type="text" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Type here"/>
-                    </div>
+                 
+                        <input className="w-full mb-5 text-black border-2 border-black px-2 py-4 outline-none h-auto text-nowrap"  type="text" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Type here"/>
+                    
                 </form>
             </div>
         </div>
