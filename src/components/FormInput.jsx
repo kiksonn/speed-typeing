@@ -16,12 +16,12 @@ function FormInput({ input, setInput, text, textImported }) {
     return (
         <div className={!textImported && "hidden"}>
             <div>
-                <h3>{formattedText}</h3>
+                <h3 className="mb-5">{formattedText}</h3>
             </div>
             <div>
-                <form>
+                <form className="w-full">
                     <div>
-                        <input type="text" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Type here"/>
+                        <input className="w-full mb-5"  type="text" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Type here"/>
                     </div>
                 </form>
             </div>

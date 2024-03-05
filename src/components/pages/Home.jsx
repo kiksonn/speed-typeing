@@ -18,7 +18,7 @@ function Home() {
 
   return (
     <div className="h-[100vh] flex flex-col justify-center items-center">
-      <h1 className="text-black text-center text-2xl uppercase">
+      <h1 className="text-black text-center text-2xl uppercase mb-5">
         Speed typing app
       </h1>
 
@@ -61,7 +61,7 @@ function Home() {
 
         <button
           onClick={() => window.location.reload(false)}
-          className={!finished && "hidden"}
+          className={!finished ? "hidden": "mt-5 text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"}
         >
           Restart
         </button>
