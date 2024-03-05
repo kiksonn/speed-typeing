@@ -1,6 +1,6 @@
 import CountdownTimer from "../../CountdownTimer";
 import FormInput from "../FormInput";
-// import Results from "../Results";
+import Results from "../Results";
 import TextGenerator from "../TextGenerator";
 import { useState } from "react";
 function Home() {
@@ -40,17 +40,31 @@ function Home() {
         textImported={textImported}
         setInput={setInput}
       />
-      {/* <Results text={text} input={input} setText={setText} setInput={setInput} /> */}
+      <Results text={text} input={input} finished={finished} />
       <div>
+      <button
+  onClick={() => {
+    setStartTimer(true); // Ustawienie wartości startTimer na true po kliknięciu przycisku
+    // Dodanie klasy 'hidden' w momencie kliknięcia przycisku
+    document.getElementById("startButton").classList.add("hidden");
+  }}
+  id="startButton" // Dodanie identyfikatora dla przycisku
+  className={
+    !textImported || finished
+      ? "hidden"
+      : "text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+  }
+>
+  Start
+</button>
+
+
         <button
-          onClick={() => {
-            setStartTimer(true);
-          }}
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          onClick={() => window.location.reload(false)}
+          className={!finished && "hidden"}
         >
-          Start
+          Restart
         </button>
-        <button className="hidden">Restart</button>
       </div>
     </div>
   );

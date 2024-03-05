@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 function CountdownTimer({startTimer,setStartTimer,setFinidhed}) {
 
-    const [timeLeft, setTimeLeft] = useState(60)
+    const [timeLeft, setTimeLeft] = useState(5)
 
     useEffect(() => {
 
@@ -15,6 +15,10 @@ function CountdownTimer({startTimer,setStartTimer,setFinidhed}) {
         return() => clearTimeout(timer)
 
     }, [startTimer, timeLeft])
+
+    if(timeLeft <= 0) {
+        setFinidhed(true)
+    }
 
     return (
     <div className={startTimer? "" : "hidden"}>
